@@ -30,8 +30,6 @@ public class AppConfig {
     //call AppConfig.memberRepository
     //call AppConfig.orderService
 
-
-
     @Bean
     public MemberService memberService() {
         System.out.println("call AppConfig.memberService");
@@ -48,7 +46,9 @@ public class AppConfig {
     public OrderService orderService() {
         System.out.println("call AppConfig.orderService");
         return new OrderServiceImpl(memberRepository(), discountPolicy());
+//        return null;    //멤버필드에 autowired 주입 테스트용
     }
+
 
     @Bean
     public DiscountPolicy discountPolicy() {

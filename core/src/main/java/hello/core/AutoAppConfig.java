@@ -17,8 +17,8 @@ import org.springframework.context.annotation.FilterType;
 public class AutoAppConfig {
 
     //수동 빈 등록(자동 빈과 같은 이름으로) -> 스프링부트에서는 충돌 오류 나도록 기본 값 바꿈.
-    @Bean(name = "memoryMemberRepository")
-    public MemberRepository memberRepository() {
-        return new MemoryMemberRepository();
-    }
+//    @Bean(name = "memoryMemberRepository")
+//    public MemberRepository memberRepository() {
+//        return new MemoryMemberRepository();
+//    }
 }
