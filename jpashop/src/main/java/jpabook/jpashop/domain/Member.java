@@ -1,10 +1,7 @@
 package jpabook.jpashop.domain;
 
-
-
 import lombok.Getter;
 import lombok.Setter;
-
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +26,7 @@ public class Member {
      *나는 매핑 된 거울일 뿐이야. ==읽기전용. 여기에 값을 넣는 다고 해서 order 의 foreign key 값이 변동 되지 않는다.
      */
     @OneToMany(mappedBy = "member")
-    private List<Order> orders = new ArrayList<>();
+    private List<Order> orders = new ArrayList<>(); //초기화를 하는 best practice
 
 
 }
