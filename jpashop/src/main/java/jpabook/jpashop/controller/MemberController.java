@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @Controller
 @RequiredArgsConstructor
@@ -39,5 +40,16 @@ public class MemberController {
 
         memberService.join(member);
         return "redirect:/";
+    }
+
+    /**
+     * api 만들 때는 절대 entity 를 외부로 반환해서는 안된다.
+     * entity == 스펙.
+     */
+    @GetMapping("/members")
+    public String list(Model model) {
+        List<Member> members = memberService.findMembers();     //member entity 를 그대로 뿌리기 보다는 dto 로 뿌리는 걸 지향
+        model.addAttribute("members", members);
+        return "members/memberList";
     }
 }

@@ -17,7 +17,7 @@ public class ItemRepository {
         if (item.getId() == null) {
             em.persist(item);   //신규로 완전 등록 하는 거
         } else {
-            em.merge(item);   //jpa 를 통해서 db 에 들어가 있는 거
+            em.merge(item);   //jpa 를 통해서 db 에 들어가 있는 거 (수정용)
         }
     }
 
