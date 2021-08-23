@@ -26,7 +26,7 @@ public class OrderServiceTest {
 
     @Test
     void createOrder() {
-        long memberId = 1L;
+        Long memberId = 1L; // primitive 타입은 null 을 넣을 수 없다.
         Member member = new Member(memberId, "memberA", Grade.VIP);
         memberService.join(member);
 

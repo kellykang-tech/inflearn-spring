@@ -12,6 +12,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class OrderApp {
 
+    // main 메서드에서 돌리는 것은 좋지않다. 자동화된 테스트를 작성하는 게 중요하다.
     public static void main(String[] args) {
         // 자바를 사용한 경우
 //        AppConfig appConfig = new AppConfig();

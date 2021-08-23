@@ -4,10 +4,12 @@ import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 @Component      //memoryMemberRepository
-public class MemoryMemberRepository implements MemberRepository{
+public class MemoryMemberRepository implements MemberRepository {
 
+    // 동시성 문제 때문에 실무에서는 ConcurrentHashMap 을 사용한다.
     private static Map<Long, Member> store = new HashMap<>();
 
     @Override
