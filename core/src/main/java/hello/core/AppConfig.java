@@ -12,6 +12,10 @@ import hello.core.order.OrderServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * application 운영의 전반적인 책임을 지고 있는 역할 (공연 기획자)
+ * 내 어플리케이션 전체를 설정하고 구성한다.
+ */
 @Configuration  //Configuration의 비밀
 public class AppConfig {
 

@@ -3,6 +3,10 @@ package hello.core.member;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+/**
+ * 추상화에만 의존하고 있다.
+ * 철저히 DIP 를 지키고 있다.
+ */
 @Component
 public class MemberServiceImpl implements MemberService{
 
